@@ -9,9 +9,9 @@ class Solution:
         # Hint: subtract max(z) for numerical stability before computing exp
         # return np.round(your_answer, 4)
         
-        num = np.exp(z - np.max(z))
+        num = np.exp(z - np.max(z, keepdims=True))
 
-        den = np.sum(num)
+        den = np.sum(num , keepdims=True)
 
         softmax = num / den
 
